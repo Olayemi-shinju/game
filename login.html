@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div class="grid">
+        <div class="grid_item">
+            <div class="nav">
+                <div>
+                    <h1>ExamCode</h1>
+                </div>
+                <div>
+                    <h1>Time: 00</h1>
+                </div>
+
+                <div>
+                    <h1 id="name"></h1>
+                </div>
+            </div>
+            <div class="question">
+                <div id="first question">
+                   <div id="grid">
+                        
+                   </div>
+
+                    <div class="buttons">
+                        <button class="a" id="a">A</button>
+                        <button class="a" id="b">B</button>
+                        <button class="a" id="c">C</button>
+                        <button class="a" id="d">D</button>
+                    </div>
+                    <div style="display: flex; gap: 0px;">
+                        <button class="next" onclick="next()" >Next Question</button>
+                        <button class="end next" id="end" >End</button>
+                    </div>
+                </div>
+               
+                <div id="second question" class="add">
+                    <div class="solve">
+                        <h1>find the product of 4 and 5</h1>
+                    </div>
+                    <div class="answer">
+                        <ul>
+                            <li>A. 13</li>
+                            <li>B. 10</li>
+                            <li>C. 20</li>
+                            <li>D. 25</li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="a" id="a1">A</button>
+                        <button class="a" id="b1">B</button>
+                        <button class="a" id="c1">C</button>
+                        <button class="a" id="d1">D</button>
+                    </div>
+                    <div style="display: flex; gap: 0px; display: none;" id="bet">
+                        <button class="next" onclick="next1()" >Next Question</button>
+                        <button class="end next" id="end" >End</button>
+                    </div>
+                </div>
+                <div id="third question" class="three">
+                    <div class="solve">
+                        <h1>The sum of two consecutives numbers is equal to 9. find the number</h1>
+                    </div>
+                    <div class="answer">
+                        <ul>
+                            <li>A. 3</li>
+                            <li>B. 2</li>
+                            <li>C. 5</li>
+                            <li>D. 9</li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <button class="a" id="a2">A</button>
+                        <button class="a" id="b2">B</button>
+                        <button class="a" id="c2">C</button>
+                        <button class="a" id="d2">D</button>
+                    </div>
+                    <div style="display: flex; gap: 0px; display: none;" id="bet1">
+                        <button class="next" onclick="next2()" >Next Question</button>
+                        <button class="end next" id="end" >End</button>
+                    </div>
+                </div>
+                <div id="fourth question" class="four">
+                    <div class="solve">
+                        <h1>evaluate 1011 in base 2</h1>
+                    </div>
+                    <div class="answer">
+                        <ul>
+                            <li>A. 7</li>
+                            <li>B. 5</li>
+                            <li>C. 3</li>
+                            <li>D. 9</li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="a" id="a3">A</button>
+                        <button class="a" id="b3">B</button>
+                        <button class="a" id="c3">C</button>
+                        <button class="a" id="d3">D</button>
+                    </div>
+                    <div style="display: flex; gap: 0px; display: none;" id="bet2">
+                        <button class="next" onclick="next3()" >Next Question</button>
+                        <button class="end next" id="end" >End</button>
+                    </div>
+                </div>
+                <div id="fifth question" class="five">
+                    <div class="solve">
+                        <h1>4x = 16(mod4)</h1>
+                    </div>
+                    <div class="answer">
+                        <ul>
+                            <li>A. 0</li>
+                            <li>B. 3</li>
+                            <li>C. 1</li>
+                            <li>D. 4</li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="a" id="a4">A</button>
+                        <button class="a" id="b4">B</button>
+                        <button class="a" id="c4">C</button>
+                        <button class="a" id="d4">D</button>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0px; display: none;" id="bet3">
+                    <button class="next" id="next4">Submit</button>
+                    <button class="end next" id="end" >End</button>
+                </div>
+            </div>
+        </div>
+        <div class="grid_item1"></div>
+    </div>
+    <div class="front" id="front"></div>
+    <div style="background-color: aliceblue; height: 350px; width: 35%; border-radius: 10px; margin: 100px; position: fixed; display: none; z-index: 9999999999999; top: 0; left: 250px;" id="modal">
+        <div>
+           <div style="text-align: center; line-height: 3em;">
+            <h1>Congratulation</h1>
+            <p id="person_name"></p>
+           </div>
+            <div style="margin-top: 30px; height: 145px; display: flex; justify-content: center; align-items: center; background-color: beige; width: 100%;">
+                <img src="" alt="" style="width: 100px;" id="img">
+            </div>
+            <button id="ok" style="width: 70px; height: 35px; border-radius: 5px; background-color: green; color: white; border: none; margin-left: 20px; margin-top: 20px; cursor: pointer;">Ok</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

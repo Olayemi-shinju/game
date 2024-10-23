@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+        <div class="form">
+            <h1>Username</h1>
+            <div>
+                <input type="text" name="" placeholder="Username" class="input" id="userErr" />
+               <div>
+                <span id="Err" class="span"></span>
+               </div>
+            </div>
+            <div> 
+                <button class="button" id="btn">Start</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btn').on('click', function(e){
+              let Err = $('#Err')
+              let userErr = $('#userErr').val()
+            e.preventDefault()
+            if(userErr === ''){
+                    Err.text('Username cannot be empty')
+                }else{
+                    Err.text('')
+                    window.location.href="login.html"
+                }
+                
+              
+                localStorage.setItem('user', userErr)
+          })
+        })
+    </script>
+</body>
+</html>
