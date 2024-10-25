@@ -68,7 +68,10 @@
           if(user == game1){
             // alert('it is a tie')
             document.getElementById('result').innerHTML = 'It is a tie'
-          }else if(user == game[1] && game1 == game[0] || user == game[2] && game1 == game[1] || user == game[1] && game1 == game[0]){
+          }else if(user === ""){
+            alert('pls you can only enter: rock, paper, scissor')
+          }
+          else if(user == game[1] && game1 == game[0] || user == game[2] && game1 == game[1] || user == game[0] && game1 == game[2]){
             // alert('you win')
             document.getElementById('result').innerHTML = 'you win'
           Userscore += 1
