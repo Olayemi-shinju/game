@@ -49,12 +49,12 @@
             let game = ['rock', 'paper', 'scissors']
             let computerChoice = Math.floor(Math.random() * game.length)
             let game1 = game[computerChoice]
-            document.getElementById('computer').innerHTML = `Computer: ${game1}`
+            document.getElementById('computer').innerHTML = `Computer : ${game1}`
             let user = document.getElementById('user').value.toLowerCase()
             let data = {
                 user: user
             }
-          document.getElementById('you').innerHTML = `You: ${user}`
+          document.getElementById('you').innerHTML = `You : ${user}`
             let time = 2
             let timeInterval;
             function inter(){
@@ -68,18 +68,21 @@
           if(user == game1){
             // alert('it is a tie')
             document.getElementById('result').innerHTML = 'It is a tie'
-          }else if(user != game[0] || game[1] || game[2]){
-            alert('pls you can only enter: rock, paper, scissor')
           }
+         
           else if(user == game[1] && game1 == game[0] || user == game[2] && game1 == game[1] || user == game[0] && game1 == game[2]){
             // alert('you win')
             document.getElementById('result').innerHTML = 'you win'
           Userscore += 1
-          }else{
-            // alert('computer win')
+          }
+          else{
             Computerscore += 1
             document.getElementById('result').innerHTML = 'Computer Win'
           }
+          
+
+       
+
          
           
         }) 
