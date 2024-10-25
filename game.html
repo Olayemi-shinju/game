@@ -68,7 +68,7 @@
           if(user == game1){
             // alert('it is a tie')
             document.getElementById('result').innerHTML = 'It is a tie'
-          }else if(user === ""){
+          }else if(user != game[0] || game[1] || game[2]){
             alert('pls you can only enter: rock, paper, scissor')
           }
           else if(user == game[1] && game1 == game[0] || user == game[2] && game1 == game[1] || user == game[0] && game1 == game[2]){
